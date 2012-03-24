@@ -1,15 +1,13 @@
 require 'rake'
 require 'erb'
 
+IGNORE_FILES = %w[Rakefile README.rdoc LICENSE dotfiles]
+
 desc "install the dot files into user's home directory"
 task :install do
   replace_all = false
-
-  files = Dir['*']
-  files.delete("dotfiles")
-
   files.each do |file|
-    next if %w[Rakefile README.rdoc LICENSE].include? file
+    next if %w[Rakefile README.rdoc LICENSE dotfiles].include? file
 
     if File.exist?(File.join(ENV['HOME'], ".#{file.sub('.erb', '')}"))
       if File.identical? file, File.join(ENV['HOME'], ".#{file.sub('.erb', '')}")
@@ -34,6 +32,15 @@ task :install do
       link_file(file)
     end
   end
+end
+
+desc "list the dot files that will be installed into user's home directory"
+task :list do
+  puts files
+end
+
+def files
+  Dir['*'] - IGNORE_FILES
 end
 
 def replace_file(file)
