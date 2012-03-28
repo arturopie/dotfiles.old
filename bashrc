@@ -138,3 +138,4 @@ emacsclient() {
 evince() {
     command evince "$@" &
 }
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
