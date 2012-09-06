@@ -139,5 +139,5 @@ evince() {
     command evince "$@" &
 }
 
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
+source ~/.rvm/scripts/rvm
+export PATH="$HOME/.rvm/bin:$PATH"
