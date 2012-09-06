@@ -123,7 +123,7 @@ emacs() {
     if [[ $@ == *-nw* ]]; then
         command emacs "$@"
     else
-        command emacs "$@" &
+        command emacs -mm "$@" &
     fi
 }
 
