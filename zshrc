@@ -40,4 +40,6 @@ source $ZSH/oh-my-zsh.sh
 export PATH=/opt/ibm/db2/V9.7/bin:/home/arturo/.rvm/gems/ree-1.8.7-2011.03/bin:/home/arturo/.rvm/gems/ree-1.8.7-2011.03@global/bin:/home/arturo/.rvm/rubies/ree-1.8.7-2011.03/bin:/home/arturo/.rvm/bin:/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/home/arturo/sqllib/bin:/home/arturo/sqllib/adm:/home/arturo/sqllib/misc:/home/arturo/sqllib/db2tss/bin
 
 source ~/.rvm/scripts/rvm
-export PATH="$HOME/.rvm/bin:$PATH"
+export PATH="$HOME/.rvm/bin:$HOME/scripts:$PATH"
+
+xmodmap ~/.xmodmap
