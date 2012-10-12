@@ -141,5 +141,3 @@ evince() {
 
 source ~/.rvm/scripts/rvm
 export PATH="$HOME/.rvm/bin:$PATH"
-
-xmodmap ~/.xmodmap
