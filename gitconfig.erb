@@ -8,6 +8,7 @@
 	br = branch
 	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%%an>%Creset' --abbrev-commit --date=relative
 	git-undo = git reset --soft HEAD^
+	git-count = git shortlog -sn
 [core]
 	editor = emacs -q
 	excludesfile = /home/arturo/.gitignore_global
