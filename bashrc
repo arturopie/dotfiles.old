@@ -110,6 +110,10 @@ git() {
 # to use bundle exec when using rake 0.8.7
 rake() { if [ -e ./Gemfile.lock ]; then bundle exec rake "$@"; else /usr/bin/env rake "$@"; fi; }
 
+devreview() {
+   git log --pretty=oneline | egrep "Merge branch '${1}.*' into (icg|dev|release|production|rails_3)" | awk '{print "https://github.com/nulogy/packmanager/commit/" $1}' 
+}
+
 #to use db2
 export PATH=/opt/ibm/db2/V9.7/bin:$PATH
 
