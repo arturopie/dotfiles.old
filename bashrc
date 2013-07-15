@@ -114,14 +114,6 @@ devreview() {
    git log --pretty=oneline | egrep "Merge branch '${1}.*' into (icg|dev|release|production|rails_3)" | awk '{print "https://github.com/nulogy/packmanager/commit/" $1}' 
 }
 
-#to use db2
-export PATH=/opt/ibm/db2/V9.7/bin:$PATH
-
-# The following three lines have been added by UDB DB2.
-if [ -f /home/arturo/sqllib/db2profile ]; then
-    . /home/arturo/sqllib/db2profile
-fi
-
 # to avoid locking the terminal when opening emacs, emacsclient, or evince
 emacs() {
     if [[ $@ == *-nw* ]]; then
@@ -145,3 +137,4 @@ evince() {
 
 source ~/.rvm/scripts/rvm
 export PATH="$HOME/.rvm/bin:$PATH"
+export RUBYMINE_JDK="$HOME/programs/jdk1.7.0_25"
