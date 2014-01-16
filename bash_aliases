@@ -9,3 +9,5 @@
     alias uw-news='ssh -L 1190:news.uwaterloo.ca:119 uw-server'
 
     function kill-cmd() { ps xa | grep "$@" | grep -v grep | awk '{print $1}' | sudo xargs kill ;}
+
+    alias karma='node_modules/.bin/karma'
