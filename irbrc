@@ -4,12 +4,23 @@ end
 
 begin
   require 'awesome_print'
+  puts "awesome_print loaded"
+
   require 'active_support/all'
+  puts "active_support/all loaded"
+
 #  require 'clipboard'
   require 'hirb'
+  puts "hirb loaded"
+
   require 'interactive_editor'
+  puts "interactive_editor loaded"
+  
   require 'looksee'
+  puts "looksee loaded"
+  
   require 'whats_up/classic'
+  puts "whats_up loaded"
 
   # Configure prompt
   IRB.conf[:PROMPT_MODE] = :SIMPLE
@@ -33,5 +44,6 @@ begin
   # Predefine hash and array instances for convenience
   H = { bob: 'Marley', mom: 'Barley', gods: 'Harley', chris: 'Farley' }
   A = H.keys
-#rescue Exception
+rescue Exception => e
+  puts e
 end

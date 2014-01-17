@@ -139,3 +139,5 @@ source ~/.rvm/scripts/rvm
 export PATH="$HOME/.rvm/bin:$PATH"
 export PATH="$HOME/.cljr/bin:$PATH"
 export RUBYMINE_JDK="$HOME/programs/jdk1.7.0_25"
+
+export EDITOR=emacsclient
