@@ -135,6 +135,15 @@ evince() {
     command evince "$@" &
 }
 
+# to kill connections to a postgresql db
+killdbcon(){
+    USER_OPT=""
+    if [[ -n $2 ]]; then
+        USER_OPT="-U $2"
+    fi
+    command psql $USER_OPT $1 -c "SELECT pg_terminate_backend(procpid) FROM pg_stat_activity WHERE procpid <> pg_backend_pid() AND datname = '$1';"
+}
+
 source ~/.rvm/scripts/rvm
 export PATH="$HOME/.rvm/bin:$PATH"
 export PATH="$HOME/.cljr/bin:$PATH"
