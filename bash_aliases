@@ -11,3 +11,5 @@
     function kill-cmd() { ps xa | grep "$@" | grep -v grep | awk '{print $1}' | sudo xargs kill ;}
 
     alias karma='node_modules/.bin/karma'
+
+    alias xrun='xvfb-run -a'
