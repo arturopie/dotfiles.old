@@ -61,11 +61,16 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
 fi
 
 #Git tab completion
-if [ -f ~/git-completion.bash ]; then 
-    source ~/git-completion.bash
+if [ -f ~/.git-completion.bash ]; then 
+    source ~/.git-completion.bash
+fi
+
+if [ -f ~/.git-prompt.sh ]; then 
+    source ~/.git-prompt.sh
 fi
 
 if [ "$color_prompt" = yes ]; then
+    GIT_PS1_SHOWDIRTYSTATE=yes
     PS1="${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\[\033[00;33m\]\$(__git_ps1 \" (%s)\")\[\033[01;36m\] \$\[\033[00m\] "
 else
     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
@@ -105,8 +110,6 @@ git() {
   fi
 }
 
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function
-
 # to use bundle exec when using rake 0.8.7
 rake() { if [ -e ./Gemfile.lock ]; then bundle exec rake "$@"; else /usr/bin/env rake "$@"; fi; }
 
@@ -145,8 +148,7 @@ killdbcon(){
 }
 
 source ~/.rvm/scripts/rvm
-export PATH="$HOME/.rvm/bin:$PATH"
-export PATH="$HOME/.cljr/bin:$PATH"
-export RUBYMINE_JDK="$HOME/programs/jdk1.7.0_25"
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+nvm use 0.10
 
 export EDITOR=emacsclient
