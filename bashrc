@@ -149,6 +149,7 @@ killdbcon(){
 
 source ~/.rvm/scripts/rvm
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+export CDPATH="~/src/packmanager"
 nvm use 0.10
 
 export EDITOR=emacsclient
