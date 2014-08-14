@@ -18,6 +18,6 @@
 
     alias acceptance='xvfb-run --auto-servernum --server-num=1 --server-args="-screen 0, 1280x1024x24" bundle exec rspec'
 
-    alias gfailed='rake gorgon:failed_deprecated'
+    alias gfailed='rake gorgon:failed'
 
     alias jstest='xrun bundle exec rake jstest:all'
