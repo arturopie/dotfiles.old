@@ -22,9 +22,10 @@
 
     alias jstest='xrun bundle exec rake jstest:all'
 
+    alias rnu='rake nulogy:update'
+
     # emacs in OSX
     if [ -x /Applications/Emacs.app/Contents/MacOS/Emacs ]; then
         alias emacs='/Applications/Emacs.app/Contents/MacOS/Emacs &'
         alias emacsclient='/Applications/Emacs.app/Contents/MacOS/bin/emacsclient'
     fi
-
