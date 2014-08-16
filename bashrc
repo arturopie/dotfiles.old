@@ -118,13 +118,13 @@ devreview() {
 }
 
 # to avoid locking the terminal when opening emacs, emacsclient, or evince
-emacs() {
-    if [[ $@ == *-nw* ]]; then
-        command emacs "$@"
-    else
-        command emacs -mm "$@" &
-    fi
-}
+# emacs() {
+#     if [[ $@ == *-nw* ]]; then
+#         command emacs "$@"
+#     else
+#         command emacs -mm "$@" &
+#     fi
+# }
 
 emacsclient() {
     if [[ $@ == *-nw* ]]; then
