@@ -22,7 +22,7 @@
 
     alias jstest='xrun bundle exec rake jstest:all'
 
-    alias rnu='rake nulogy:update'
+    alias pmu='zeus rake packman:update'
 
     # emacs in OSX
     if [ -x /Applications/Emacs.app/Contents/MacOS/Emacs ]; then
