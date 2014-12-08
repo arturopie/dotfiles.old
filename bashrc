@@ -117,6 +117,15 @@ devreview() {
    git log --pretty=oneline | egrep "Merge branch '${1}.*' into (icg|dev|release|production|rails_3)" | awk '{print "https://github.com/nulogy/packmanager/commit/" $1}' 
 }
 
+gmg() {
+  TICKET_ID=$(git branch | grep '*' | sed 's/[^0-9]*//g')
+  open http://mingle.nu/projects/packmanager/cards/$TICKET_ID
+}
+
+kill_processes_listening_on() {
+ lsof -i:$1 -t | xargs kill
+}
+
 # to avoid locking the terminal when opening emacs, emacsclient, or evince
 # emacs() {
 #     if [[ $@ == *-nw* ]]; then
@@ -147,8 +156,6 @@ killdbcon(){
     command psql $USER_OPT $1 -c "SELECT pg_terminate_backend(procpid) FROM pg_stat_activity WHERE procpid <> pg_backend_pid() AND datname = '$1';"
 }
 
-source ~/.rvm/scripts/rvm
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 export PATH="$PATH:/usr/local/sbin"
 export PATH="$PATH:$HOME/programs/packer_0.7.2_darwin_amd64"
 export CDPATH="$CDPATH:~/src/packmanager:~/src"
