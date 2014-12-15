@@ -117,8 +117,12 @@ devreview() {
    git log --pretty=oneline | egrep "Merge branch '${1}.*' into (icg|dev|release|production|rails_3)" | awk '{print "https://github.com/nulogy/packmanager/commit/" $1}' 
 }
 
-gmg() {
-  TICKET_ID=$(git branch | grep '*' | sed 's/[^0-9]*//g')
+mingle() {
+  if [ -n "$1" ]; then
+    TICKET_ID=$1
+  else
+    TICKET_ID=$(git branch 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \([0-9]*\).*/\1/")
+  fi
   open http://mingle.nu/projects/packmanager/cards/$TICKET_ID
 }
 
