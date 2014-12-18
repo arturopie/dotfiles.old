@@ -157,6 +157,8 @@ killdbcon(){
     if [[ -n $2 ]]; then
         USER_OPT="-U $2"
     fi
+
+    # Use procpid instead of pid for PostgreSQL 9.2
     command psql $USER_OPT $1 -c "SELECT pg_terminate_backend(pid) FROM pg_stat_activity WHERE pid <> pg_backend_pid() AND datname = '$1';"
 }
 
