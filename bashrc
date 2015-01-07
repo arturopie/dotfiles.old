@@ -135,6 +135,8 @@ kill_processes_listening_on() {
  lsof -i:$1 -t | xargs kill
 }
 
+alias gitbr='git branch -r | cut -c10- | selecta | xargs git checkout'
+
 # to avoid locking the terminal when opening emacs, emacsclient, or evince
 # emacs() {
 #     if [[ $@ == *-nw* ]]; then
