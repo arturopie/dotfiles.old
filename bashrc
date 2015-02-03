@@ -171,6 +171,7 @@ killdbcon(){
 
 export PATH="$PATH:/usr/local/sbin"
 export PATH="$PATH:$HOME/programs/packer_0.7.2_darwin_amd64"
+export PATH="$PATH:/Applications/Postgres.app/Contents/Versions/9.3/bin/pg_config"
 export CDPATH="$CDPATH:~/src/packmanager:~/src"
 nvm use 0.10
 
