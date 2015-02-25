@@ -1,11 +1,11 @@
 # Path to your oh-my-zsh configuration.
-ZSH=$HOME/.oh-my-zsh
+export ZSH=/Users/arturopie/.oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="gnzh"
+ZSH_THEME="my-theme"
 
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
@@ -30,7 +30,7 @@ source $HOME/.bash_aliases
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git ruby rails3 bundler rake)
+plugins=(autojump brew bundler history-substring-search git rake-fast nulogy richard terminalapp zsh_reload)
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function
 
@@ -38,6 +38,8 @@ source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 export PATH=$PATH:/opt/ibm/db2/V9.7/bin:/home/arturo/.rvm/gems/ree-1.8.7-2011.03/bin:/home/arturo/.rvm/gems/ree-1.8.7-2011.03@global/bin:/home/arturo/.rvm/rubies/ree-1.8.7-2011.03/bin:/home/arturo/.rvm/bin:/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/home/arturo/sqllib/bin:/home/arturo/sqllib/adm:/home/arturo/sqllib/misc:/home/arturo/sqllib/db2tss/bin
+export CDPATH="$CDPATH:~/src/packmanager:~/src"
 
-source ~/.rvm/scripts/rvm
-export PATH="$HOME/.rvm/bin:$HOME/scripts:$PATH:$HOME/racket/bin"
+unsetopt correct_all
+setopt hist_ignore_space hist_find_no_dups
+
