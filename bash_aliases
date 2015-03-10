@@ -24,6 +24,8 @@
 
     alias pmu='zeus rake packman:update'
 
+    alias kill_pm_processes='kill_processes_listening_on 3000 && kill_processes_listening_on 5555'
+
     # emacs in OSX
     if [ -x /Applications/Emacs.app/Contents/MacOS/Emacs ]; then
         alias emacs='/Applications/Emacs.app/Contents/MacOS/Emacs &'
