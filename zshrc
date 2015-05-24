@@ -38,7 +38,10 @@ source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 export PATH=$PATH:/opt/ibm/db2/V9.7/bin:/home/arturo/.rvm/gems/ree-1.8.7-2011.03/bin:/home/arturo/.rvm/gems/ree-1.8.7-2011.03@global/bin:/home/arturo/.rvm/rubies/ree-1.8.7-2011.03/bin:/home/arturo/.rvm/bin:/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/home/arturo/sqllib/bin:/home/arturo/sqllib/adm:/home/arturo/sqllib/misc:/home/arturo/sqllib/db2tss/bin
+export PATH="$PATH:$HOME/Applications/packer_0.7.5_darwin_386"
 export CDPATH="$CDPATH:~/src/packmanager:~/src"
+
+export CATALINA_HOME=/Users/arturopie/Applications/apache-tomcat-7.0.61
 
 unsetopt correct_all
 setopt hist_ignore_space hist_find_no_dups
