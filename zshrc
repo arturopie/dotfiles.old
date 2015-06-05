@@ -43,6 +43,8 @@ export CDPATH="$CDPATH:~/src/packmanager:~/src"
 
 export CATALINA_HOME=/Users/arturopie/Applications/apache-tomcat-7.0.61
 
+export JAVA_HOME=`/usr/libexec/java_home -v 1.7`
+
 unsetopt correct_all
 setopt hist_ignore_space hist_find_no_dups
 
