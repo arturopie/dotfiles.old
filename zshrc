@@ -49,3 +49,12 @@ export RUBYMINE=enabled
 unsetopt correct_all
 setopt hist_ignore_space hist_find_no_dups
 
+kill_pm_processes() {
+    echo "Killing ruby proccesses listening on 5555"
+    lsof -P -i :5555 | sed -n 's/ruby *\([0-9]*\).*\:5555.*/\1/p' | xargs kill
+
+    echo "Killing nginx proccesses listening on 3000"
+    lsof -P -i :3000 | sed -n 's/nginx *\([0-9]*\).*\:3000.*/\1/p' | xargs kill
+}
+
+

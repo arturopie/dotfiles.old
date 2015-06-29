@@ -20,11 +20,11 @@
 
     alias gfailed='rake gorgon:failed'
 
-    alias jstest='xrun bundle exec rake jstest:all'
+    alias jstest='bundle exec rake jstest:all'
 
     alias pmu='zeus rake packman:update'
 
-    alias kill_pm_processes='kill_processes_listening_on 3000 && kill_processes_listening_on 5555'
+    alias fstart='foreman start; kill_pm_processes'
 
     # emacs in OSX
     if [ -x /Applications/Emacs.app/Contents/MacOS/Emacs ]; then
