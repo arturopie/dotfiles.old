@@ -10,8 +10,11 @@
 	undo = reset --soft HEAD^
 	count = shortlog -sn
 [core]
-	editor = emacs -q
-	excludesfile = /home/arturo/.gitignore_global
+  editor = emacs -q
+  excludesfile = /home/arturo/.gitignore_global
+  commentchar = $
+	ignorecase = false
+
 [merge]
 	tool = meld
 
@@ -35,3 +38,12 @@
   added = yellow
   changed = green
   untracked = cyan
+
+[push]
+	default = simple
+
+[remote "origin"]
+	push = HEAD
+
+[branch]
+	autosetupmerge = true
