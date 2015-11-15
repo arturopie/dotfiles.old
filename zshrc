@@ -30,7 +30,7 @@ source $HOME/.bash_aliases
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(autojump brew bundler history-substring-search git rake-fast nulogy richard terminalapp zeus zsh_reload)
+plugins=(autojump brew bundler history-substring-search git rake-fast npm nulogy richard terminalapp zeus zsh_reload)
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function
 
