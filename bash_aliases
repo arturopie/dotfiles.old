@@ -18,8 +18,6 @@
 
     alias acceptance='xvfb-run --auto-servernum --server-num=1 --server-args="-screen 0, 1280x1024x24" bundle exec rspec'
 
-    alias gfailed='RAILS_ENV='test' rake gorgon:failed'
-
     alias jstest='bundle exec rake jstest:all'
 
     alias pmu='zeus rake packman:update'
