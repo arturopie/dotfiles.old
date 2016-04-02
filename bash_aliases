@@ -24,6 +24,8 @@
 
     alias fstart='foreman start; kill_pm_processes'
 
+    alias wttr='curl wttr.in/toronto'
+
     # emacs in OSX
     if [ -x /Applications/Emacs.app/Contents/MacOS/Emacs ]; then
         alias emacs='/Applications/Emacs.app/Contents/MacOS/Emacs &'
