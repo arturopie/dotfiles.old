@@ -64,3 +64,5 @@ pm_build_production() {
     RAILS_ENV=production rake assets:precompile
     ./node_modules/gulp/bin/gulp.js release --no-uglify
 }
+
+eval "$(direnv hook zsh)"
