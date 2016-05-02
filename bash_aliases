@@ -22,7 +22,7 @@
 
     alias pmu='zeus rake packman:update'
 
-    alias fstart='foreman start; kill_pm_processes'
+    alias fstart='forego start'
 
     alias wttr='curl wttr.in/toronto'
 
