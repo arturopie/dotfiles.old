@@ -32,6 +32,9 @@ source $HOME/.bash_aliases
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=(autojump brew bundler history-substring-search git rake-fast npm nulogy richard terminalapp zeus zsh_reload gem)
 
+export NVM_DIR="/Users/arturopie/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function
 
 source $ZSH/oh-my-zsh.sh
@@ -40,7 +43,7 @@ source $ZSH/oh-my-zsh.sh
 export PATH=$PATH:/opt/ibm/db2/V9.7/bin:/home/arturo/.rvm/gems/ree-1.8.7-2011.03/bin:/home/arturo/.rvm/gems/ree-1.8.7-2011.03@global/bin:/home/arturo/.rvm/rubies/ree-1.8.7-2011.03/bin:/home/arturo/.rvm/bin:/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/home/arturo/sqllib/bin:/home/arturo/sqllib/adm:/home/arturo/sqllib/misc:/home/arturo/sqllib/db2tss/bin
 export PATH="$PATH:$HOME/Applications/packer_0.8.6_darwin_amd64"
 export PATH="$PATH:$HOME/Applications/apache-maven-3.3.9/bin"
-export PATH="/Applications/Postgres.app/Contents/Versions/9.3/bin:$PATH"
+export PATH="$PATH:/Applications/Postgres.app/Contents/Versions/9.3/bin"
 export CDPATH="$CDPATH:~/src/packmanager:~/src"
 
 export CATALINA_HOME=/Users/arturopie/Applications/apache-tomcat-7.0.61
@@ -65,4 +68,5 @@ pm_build_production() {
     ./node_modules/gulp/bin/gulp.js release --no-uglify
 }
 
-eval "$(direnv hook zsh)"
+# eval "$(direnv hook zsh)"
+
