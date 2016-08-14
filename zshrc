@@ -30,7 +30,7 @@ source $HOME/.bash_aliases
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(autojump brew bundler history-substring-search git rake-fast npm nulogy richard terminalapp zeus zsh_reload gem)
+plugins=(autojump brew bundler history-substring-search git rake-fast npm nulogy richard terminalapp zeus zsh_reload gem mix)
 
 export NVM_DIR="/Users/arturopie/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
