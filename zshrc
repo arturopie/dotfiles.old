@@ -70,3 +70,5 @@ pm_build_production() {
 
 # eval "$(direnv hook zsh)"
 
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
